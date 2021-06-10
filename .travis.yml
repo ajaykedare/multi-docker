@@ -15,6 +15,7 @@ after_success:
   - docker build -t ajaykedare/multi-worker ./worker
   
   # Login to docker CLI
+  - echo "Logging in to DOCKER CLI"
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOKCER_ID" --password-stdin
   # Take those images and put them to the docker hub
   - docker push ajaykedare/multi-client 
